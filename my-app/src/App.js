@@ -7,7 +7,7 @@ import "./App.css";
 function App() {
   return (
     <Wrapper>
-      <h1 className="title">Friends List</h1>
+      <h1 className="title">Click Each Friend No More Than Once!</h1>
       <FriendCard
         name={friends[0].name}
         image={friends[0].image}
