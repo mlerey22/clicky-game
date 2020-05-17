@@ -1,8 +1,26 @@
 import React from "react";
 import "./style.css";
 
-function FriendCard(props) {
-  return (
+class FriendCard extends React.Component(props) {
+  // Setting the initial state of the Counter component
+  state = {
+    count: 0
+  };
+
+  // handleIncrement increments this.state.count by 1
+  handleIncrement = () => {
+    // We always use the setState method to update a component's state
+    this.setState({ count: this.state.count + 1 });
+  };
+
+
+  // handleIncrement increments this.state.count by 1
+  handleIncrement = () => {
+    // We always use the setState method to update a component's state
+    this.setState({ count: this.state.count + 1 });
+  };
+  render() {
+    return (
     <div className="card">
       <div className="img-container">
         <img alt={props.name} src={props.image} />
@@ -20,9 +38,11 @@ function FriendCard(props) {
           </li>
         </ul>
       </div>
-      <span className="remove">Click Here</span>
+      <button className="btn btn-primary" onClick={this.handleIncrement}>Click</button>
     </div>
   );
-}
+  };
+};
 
-export default FriendCard;
+
+  export default FriendCard;
